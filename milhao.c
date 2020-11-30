@@ -36,6 +36,7 @@ void ranking(){
     }   
 }
 
+// Function fim
 void fim(){
     system("cls||clear");
     puts("#############################");
