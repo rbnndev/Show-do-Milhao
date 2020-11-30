@@ -16,8 +16,8 @@ typedef struct{
 
 // Struct Pergunta/Resposta
 typedef struct{
-    char ask[200];
-    char answer[200];
+    char ask[300];
+    char answer[300];
 }Ask;
 
 // Function Ranking
@@ -36,13 +36,21 @@ void ranking(){
     }   
 }
 
+void fim(){
+    system("cls||clear");
+    puts("#############################");
+    puts("#############################");
+    puts("######   Fim do jogo!  ######");
+    puts("#############################");
+    puts("#############################\n");
+}
+
 main(void){
     // Variaveis e Criação de vetor
     Menu menu;
     Ranking rank;
     Ask perg[10];
     Ask resp[10];
-    char resposta[10] = {'a', 'c', 'd', 'd', 'a', 'x', 'x', 'x', 'x', 'x'};
 
     int i=0, a = 0, end = 0;
     char r[10];
@@ -61,52 +69,52 @@ main(void){
                         "c: marcacao\n"
                         "d: boolean\n"
                         "e: portugues");
-    strcpy(perg[2].ask, "Um programador está criando o menu principal da página de abertura de um site, que conterá o bloco principal de links de navegação."
-                        " Considerando os elementos semânticos da linguagem HTML5, estes links devem ficar imediatamente no interior da tag \n\n"
+    strcpy(perg[2].ask, "Um programador esta criando o menu principal da pagina de abertura de um site, que contera o bloco principal de links de navegacao."
+                        " Considerando os elementos semanticos da linguagem HTML5, estes links devem ficar imediatamente no interior da tag \n\n"
                         "a: <mark>\n"
                         "b: <progress>\n"
                         "c: <choose>\n"
                         "d: <nav>\n"
                         "e: <navigation>");
-    strcpy(perg[3].ask, "Na linguagem HTML, o elemento que é um recipiente para todos os elementos do cabeçalho, em que se podem incluir scripts, instruir "
-                        "o navegador onde encontrar folhas de estilo, fornecer informações de metadados, e muito mais, é a tag:\n"
+    strcpy(perg[3].ask, "Na linguagem HTML, o elemento que e um recipiente para todos os elementos do cabecalho, em que se podem incluir scripts, instruir "
+                        "o navegador onde encontrar folhas de estilo, fornecer informacoes de metadados, e muito mais, e a tag:\n"
                         "a: <base>\n"
                         "b: <doctype>\n"
                         "c: <link>\n"
                         "d: <head>\n"
                         "e: <script>");
-    strcpy(perg[4].ask, "Qual das alternativas a seguir apresenta somente tipos de dados básicos da linguagem C?\n\n"
+    strcpy(perg[4].ask, "Qual das alternativas a seguir apresenta somente tipos de dados basicos da linguagem C?\n\n"
                         "a: char, int e float.\n"
                         "b: string, double e int,\n"
                         "c: boolean, string e float.\n"
                         "d: char, boolean e int.\n"
                         "e: string, float e int.");
-    strcpy(perg[5].ask, "Na linguagem C, para manipular um número real com 8 bytes de tamanho que possa assumir valores"
-                        " negativos, é preciso declarar uma variável do tipo\n\n"
+    strcpy(perg[5].ask, "Na linguagem C, para manipular um numero real com 8 bytes de tamanho que possa assumir valores"
+                        " negativos, e preciso declarar uma variavel do tipo\n\n"
                         "a: double.\n"
                         "b: signed float\n"
                         "c: unsigned int.\n"
                         "d: long.\n"
                         "e: int.");
-    strcpy(perg[6].ask, "Referente a alocação dinâmica de memória em C, é CORRETO afirmar:\n\n"
-                        "a: As funções malloc e free e o operador sizeof, são essenciais para a alocação dinâmica de memória.\n"
-                        "b: A função malloc usa o número de blocos de memória que serão alocados na memória.\n"
-                        "c: As funções calloc e realloc são usadas para liberar arays.\n"
-                        "d: A função clear é usada para limpar o conteúdo de um ponteiro.\n"
-                        "e: A função free é geralmente usada com o operador sizeof.");
-    strcpy(perg[7].ask, "Em C, o tipo de dado long double, tem sua especificação de conversão para printf e scanf respectivamente:\n\n"
+    strcpy(perg[6].ask, "Referente a alocacao dinamica de memoria em C, e CORRETO afirmar:\n\n"
+                        "a: As funcoes malloc e free e o operador sizeof, sao essenciais para a alocacao dinamica de memoria.\n"
+                        "b: A funcao malloc usa o numero de blocos de memoria que serao alocados na memoria.\n"
+                        "c: As funcoes calloc e realloc sao usadas para liberar arays.\n"
+                        "d: A funcao clear e usada para limpar o conteudo de um ponteiro.\n"
+                        "e: A funcao free e geralmente usada com o operador sizeof.");
+    strcpy(perg[7].ask, "Em C, o tipo de dado long double, tem sua especificacao de conversao para printf e scanf respectivamente:\n\n"
                         "a: f e f\n"
                         "b: Lf e Lf\n"
                         "c: d e d\n"
                         "d: Ld e Ld\n"
                         "e: LD e LD");
-    strcpy(perg[8].ask, "Acerca de linguagens de programação e ferramentas de desenvolvimento, julgue o item subsecutivo.\n"
-                        "Objective-C, linguagem de programação que estende a linguagem C, oferece recursos orientados a objetos,"
-                        " em que os métodos são chamados diretamente em um objeto.\n\n"
+    strcpy(perg[8].ask, "Acerca de linguagens de programacao e ferramentas de desenvolvimento, julgue o item subsecutivo.\n"
+                        "Objective-C, linguagem de programacao que estende a linguagem C, oferece recursos orientados a objetos,"
+                        " em que os metodos sao chamados diretamente em um objeto.\n\n"
                         "a: certo\n"
                         "b: errado");
-    strcpy(perg[9].ask, "Na linguagem C, o cabeçalho de biblioteca stdio.h possui definições de subrotinas relativas às operações de entrada/saída"
-                        " padrão. Uma das funções tratadas na biblioteca, associada a esse cabeçalho, é a função:\n\n"
+    strcpy(perg[9].ask, "Na linguagem C, o cabecalho de biblioteca stdio.h possui definicoes de subrotinas relativas as operacoes de entrada/saida"
+                        " padrao. Uma das funcoes tratadas na biblioteca, associada a esse cabecalho, e a funcao:\n\n"
                         "a: atoi.\n"
                         "b: trunc.\n"
                         "c: scanf.\n"
@@ -209,11 +217,7 @@ main(void){
                 }else{
                     // Fecha o game.
                     system("cls||clear");
-                    puts("#############################");
-                    puts("#############################");
-                    puts("######   Fim do jogo!  ######");
-                    puts("#############################");
-                    puts("#############################");
+                    fim();
                     end = 0;
                 }
             break; // END JOGO
@@ -230,11 +234,7 @@ main(void){
                 }else{
                     // Fecha o game.
                     system("cls||clear");
-                    puts("#############################");
-                    puts("#############################");
-                    puts("######   Fim do jogo!  ######");
-                    puts("#############################");
-                    puts("#############################");
+                    fim();
                     end = 0;
                 }   
             break; // END RANKING
@@ -256,20 +256,12 @@ main(void){
                     system("cls||clear");
                 }else{
                     system("cls||clear");
-                    puts("#############################");
-                    puts("#############################");
-                    puts("######   Fim do jogo!  ######");
-                    puts("#############################");
-                    puts("#############################");
+                    fim();
                     end = 0;
                 }
             break; // END CREDITOS
             case 4: // SAIR
-                puts("#############################");
-                puts("#############################");
-                puts("######   Fim do jogo!  ######");
-                puts("#############################");
-                puts("#############################");
+                fim();
                 Sleep(3000);
                 end = 0;
             break; // END SAIR
